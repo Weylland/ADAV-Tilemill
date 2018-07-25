@@ -1,0 +1,220 @@
+{
+  "bounds": [
+    1.5556,
+    50.0158,
+    4.1923,
+    51.0924
+  ],
+  "center": [
+    3.025,
+    50.6051,
+    9
+  ],
+  "format": "png8",
+  "interactivity": {
+    "fields": []
+  },
+  "minzoom": 8,
+  "maxzoom": 18,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "SensUniques",
+    "style.mss",
+    "points",
+    "bati",
+    "zones30"
+  ],
+  "Layer": [
+    {
+      "extent": [
+        1.4959542601541473,
+        49.92999267594165,
+        4.275257481841043,
+        51.29244027032184
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "osm_new_cyclelanes",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "166528.866490388,6434160.62138408,475919.485888678,6637661.65425882",
+        "host": "carto.droitauvelo.org",
+        "port": "5432",
+        "user": "osm-adav",
+        "password": "osm-adav",
+        "dbname": "osm-adav",
+        "id": "voiescyclables",
+        "project": "ADAV-Tilemill",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "voiescyclables",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "voiescyclables",
+      "geometry": "linestring"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        1.5632814999999918,
+        50.016721800000035,
+        4.176242300000012,
+        51.27818959999993
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "osm_new_amenities",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "174023.700546544,6449172.26598831,464897.166265331,6635136.22911311",
+        "dbname": "osm-adav",
+        "host": "carto.droitauvelo.org",
+        "port": "5432",
+        "user": "osm-adav",
+        "password": "osm-adav",
+        "id": "points",
+        "project": "ADAV",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "points",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "points"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        1.4959542601541473,
+        49.991236392583495,
+        4.210546758589583,
+        51.28184638290079
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from osm_new_sensuniques where \"cycleway\" is null and \"cycleway:left\" is null and \"cycleway:right\" is null and \"highway\"!='trunk' and \"highway\"!='cycleway' and \"highway\"!='trunk_link' and \"highway\"!='motorway' and \"highway\"!='motorway_link') as sensuniques",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "166528.866490388,6444758.27689353,468715.921127461,6635784.18979346",
+        "dbname": "osm-adav",
+        "host": "carto.droitauvelo.org",
+        "port": "5432",
+        "user": "osm-adav",
+        "password": "osm-adav",
+        "id": "sensuniques",
+        "project": "ADAV",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "sensuniques",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "sensuniques"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        1.4959542601541473,
+        49.991236392583495,
+        4.210546758589583,
+        51.28184638290079
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from osm_new_sensuniques where (\"cycleway\" is not null or \"cycleway:left\" is not null or \"cycleway:right\" is not null)  and \"highway\"!='cycleway') as sensuniquesvoitureavecequipementvelo",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "166528.866490388,6444758.27689353,468715.921127461,6635784.18979346",
+        "host": "carto.droitauvelo.org",
+        "dbname": "osm-adav",
+        "user": "osm-adav",
+        "password": "osm-adav",
+        "id": "sensuniquevoitureavecequipementvelo",
+        "project": "ADAV",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "sensuniquevoitureavecequipementvelo",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "sensuniquevoitureavecequipementvelo"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        1.5725201999999936,
+        50.226125800000034,
+        3.249313799999993,
+        51.23738920000092
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "osm_new_amenitiesbuilding",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "175052.147926136,6485529.33362442,361711.957643556,6627910.10605639",
+        "dbname": "osm-adav",
+        "host": "carto.droitauvelo.org",
+        "port": "5432",
+        "user": "osm-adav",
+        "password": "osm-adav",
+        "id": "bati",
+        "project": "ADAV",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "bati",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "bati"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        1.5632814999999918,
+        50.1114619999997,
+        3.9993341999999896,
+        51.05158739999992
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from osm_new_cyclelanes where \"maxspeed\" is not null or \"highway\"='living_street' or \"highway\"='pedestrian') as zones30",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "174023.700546544,6465601.51923518,445203.846656123,6630424.01451001",
+        "dbname": "osm-adav",
+        "host": "carto.droitauvelo.org",
+        "port": "5432",
+        "user": "osm-adav",
+        "password": "osm-adav",
+        "id": "zones30",
+        "project": "ADAV-Tilemill",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "zones30",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "zones30"
+    }
+  ],
+  "scale": 1,
+  "metatile": 4,
+  "name": "ADAV_github",
+  "description": "",
+  "attribution": "",
+  "legend": ""
+}

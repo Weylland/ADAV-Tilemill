@@ -1,0 +1,10 @@
+#couloir_de_bus_en_sens_unique_voiture {
+  		// Couloir de bus en sens unique pour les vélos
+    	marker-file: url('images/');
+    	marker-placement: line;
+    	marker-opacity: 0.5;
+    	[zoom<=14] { marker-width: @z14; marker-spacing: @z14*2.5; }
+    	[zoom=15] { marker-width: @z15; marker-spacing: @z15*2.5; }
+    	[zoom=16] { marker-width: @z16; marker-spacing: @z16*2.5; }
+    	[zoom>=17] { marker-width: @z17; marker-spacing: @z17*2.5; }
+}

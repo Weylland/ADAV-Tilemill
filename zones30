@@ -1,0 +1,33 @@
+@z12: 1;
+@z13: 1.5;
+@z14: 3.5;
+@z15: 4.3;
+@z16: 7.2;
+@z17: 11.5;
+
+#zones30 {
+  /* Zone de rencontre et zones 30*/
+  [maxspeed<=30] {
+    [oneway=0] {
+    	line-color: #66ccff;
+    	[zoom<=12] { line-width: @z12; }
+    	[zoom=13] { line-width: @z13; }
+    	[zoom=14] { line-width: @z14; }
+    	[zoom=15] { line-width: @z15; }
+    	[zoom=16] { line-width: @z16; }
+    	[zoom>=17] { line-width: @z17; }
+    	line-join: round;
+      }
+    }
+  [highway='living_street'] {
+    	line-color: #66ccff;
+    	[zoom<=12] { line-width: @z12; }
+    	[zoom=13] { line-width: @z13; }
+    	[zoom=14] { line-width: @z14; }
+    	[zoom=15] { line-width: @z15; }
+    	[zoom=16] { line-width: @z16; }
+    	[zoom>=17] { line-width: @z17; }
+    	line-join: round;
+  }
+
+}

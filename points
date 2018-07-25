@@ -1,0 +1,25 @@
+#points {
+[zoom>=14]{
+  [type='bicycle_parking'] {
+    point-file:url('images/parking_velo.png');
+    [zoom=14] {point-transform:"scale(0.4)";}
+    [zoom=15] {point-transform:"scale(0.5)";}
+    [zoom=16] {point-transform:"scale(0.6)"; point-allow-overlap:true;}
+    [zoom=17] {point-transform:"scale(0.8)"; point-allow-overlap:true;}
+    [access=null] { 
+      	[zoom<16] { point-transform:"scale(0)"; } 
+      	point-file: url('images/parking_velo.png'); }
+    	[bicycle_parking='shed'] [bicycle_parking='building']{
+      		point-file:url('images/parking_securise.png');
+      	}
+    }
+  [type='bicycle_rental'] {
+    point-file:url('images/VLS_rouge.png');
+    point-allow-overlap:true;
+    [zoom=14] {point-transform:"scale(0.4)";}
+    [zoom=15] {point-transform:"scale(0.5)";}
+    [zoom=16] {point-transform:"scale(0.6)"; point-allow-overlap:true;}
+    [zoom=17] {point-transform:"scale(0.8)"; point-allow-overlap:true;}
+    }
+  } 
+}

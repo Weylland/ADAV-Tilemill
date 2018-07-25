@@ -1,0 +1,19 @@
+/*#networks {
+    [zoom>=12] { line-width: @z12+6; }
+    [zoom=13] { line-width: @z13+6; }
+    [zoom=14] { line-width: @z14+6; }
+    [zoom=15] { line-width: @z15+6; }
+    [zoom=16] { line-width: @z16+6; }
+    [zoom>=17] { line-width: @z17+6; }
+	line-join: round;
+	line-color:#ff3030;
+  	line-opacity: 0.8;
+    [name!=null],[zoom>=14] {
+    	shield-name: "[name]";
+    	shield-file: url('images/velo_shield.png');
+   		shield-size: 10;
+    	shield-face-name: "DejaVu Sans Book";
+  		shield-fill: #111;
+    	shield-min-distance: 2;
+	}
+}*/
