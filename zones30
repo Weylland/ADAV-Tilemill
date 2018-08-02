@@ -17,7 +17,11 @@
     	[zoom=16] { line-width: @z16; }
     	[zoom>=17] { line-width: @z17; }
     	line-join: round;
+      	line-opacity: 0.5;
       }
+    [railway='undefined'] {
+    	opacity: 0;
+  	}
     }
   [highway='living_street'] {
     	line-color: #66ccff;
@@ -28,6 +32,6 @@
     	[zoom=16] { line-width: @z16; }
     	[zoom>=17] { line-width: @z17; }
     	line-join: round;
+    	line-opacity: 0.5;
   }
-
 }
