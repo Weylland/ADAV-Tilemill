@@ -8,7 +8,6 @@
 #zones30 {
   /* Zone de rencontre et zones 30*/
   [maxspeed<=30] {
-    [oneway=0] {
     	line-color: #66ccff;
     	[zoom<=12] { line-width: @z12; }
     	[zoom=13] { line-width: @z13; }
@@ -17,8 +16,7 @@
     	[zoom=16] { line-width: @z16; }
     	[zoom>=17] { line-width: @z17; }
     	line-join: round;
-      	line-opacity: 0.5;
-      }
+      	line-opacity: 0.2;
       [railway='rail'] {
   		line-opacity: 0;
   	  }
@@ -32,6 +30,6 @@
     	[zoom=16] { line-width: @z16; }
     	[zoom>=17] { line-width: @z17; }
     	line-join: round;
-    	line-opacity: 0.5;
+    	line-opacity: 0.2;
   }
 }
