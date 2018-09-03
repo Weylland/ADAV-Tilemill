@@ -19,9 +19,9 @@
     	line-join: round;
       	line-opacity: 0.5;
       }
-    [railway='undefined'] {
-    	opacity: 0;
-  	}
+      [railway='rail'] {
+  		line-opacity: 0;
+  	  }
     }
   [highway='living_street'] {
     	line-color: #66ccff;
