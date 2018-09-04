@@ -16,7 +16,7 @@
     	[zoom=16] { line-width: @z16; }
     	[zoom>=17] { line-width: @z17; }
     	line-join: round;
-      	line-opacity: 0.2;
+      	line-opacity: 0.4;
       [railway='rail'] {
   		line-opacity: 0;
   	  }
@@ -30,6 +30,6 @@
     	[zoom=16] { line-width: @z16; }
     	[zoom>=17] { line-width: @z17; }
     	line-join: round;
-    	line-opacity: 0.2;
+    	line-opacity: 0.4;
   }
 }
