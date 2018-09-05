@@ -88,7 +88,7 @@ Map {
 		[zoom=13] { line-offset: @z13/2; line-width: @z13/2; line-dasharray: @z13 - 2, @z13*1.5; }
 		[zoom=14] { line-offset: @z14/2; line-width: @z14/2; line-dasharray: @z14 - 2, @z14*1.5; }
 		[zoom=15] { line-offset: @z15/2; line-width: @z15/2; line-dasharray: @z15 - 2, @z15*1.5; }
-		[zoom=16] { line-offset: @z16/2; line-width: @z16/2; line-dasharray: @z16 - 2, @z16*16.5; }
+		[zoom=16] { line-offset: @z16/2; line-width: @z16/2; line-dasharray: @z16 - 2, @z16*1.5; }
 		[zoom>=17] { line-offset: @z17/2; line-width: @z17/2; line-dasharray: @z17 - 2, @z17*1.5; }
 		line-color: #009933;
 	}

@@ -8,15 +8,15 @@
 #zones30 {
   /* Zone de rencontre et zones 30*/
   [maxspeed<=30] {
-    	line-color: #66ccff;
-    	[zoom<=12] { line-width: @z12; }
-    	[zoom=13] { line-width: @z13; }
-    	[zoom=14] { line-width: @z14; }
-    	[zoom=15] { line-width: @z15; }
-    	[zoom=16] { line-width: @z16; }
-    	[zoom>=17] { line-width: @z17; }
-    	line-join: round;
-      	line-opacity: 0.4;
+      line-color: #66ccff;
+      [zoom<=12] { line-width: @z12; }
+      [zoom=13] { line-width: @z13; }
+      [zoom=14] { line-width: @z14; }
+      [zoom=15] { line-width: @z15; }
+      [zoom=16] { line-width: @z16; }
+      [zoom>=17] { line-width: @z17; }
+      line-join: round;
+      line-opacity: 0.6;
       [railway='rail'] {
   		line-opacity: 0;
   	  }
