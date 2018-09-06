@@ -29,10 +29,6 @@
 			[zoom>=17] { line-offset: -1*(@z17)/2; line-width: @z17/2; line-dasharray: @z17 - 2, @z17*1.5; }
 	}
 
-	/* Dédié vélo */
-	[highway='cycleway'] { 
-			line-color: #007711;
-	}
 	/* Tous les contre-sens indiqués par des chevrons */
 	['cycleway:right'='opposite_lane'], ['cycleway:right'='opposite_track'] {
 		marker-file: url('images/DSC_chevrons_vert_009933.svg');

@@ -35,6 +35,14 @@ Map {
 	/* piste */
 	[highway='cycleway'],[cycleway='track'] {
 			line-color: #009933;
+    	['oneway'= 1] {
+      		[zoom<=12] { line-offset: -1*(@z12)/2; line-width: @z12/2; }
+			[zoom=13] { line-offset: -1*(@z13)/2; line-width: @z13/2; }
+			[zoom=14] { line-offset: -1*(@z14)/2; line-width: @z14/2; }
+			[zoom=15] { line-offset: -1*(@z15)/2; line-width: @z15/2; }
+			[zoom=16] { line-offset: -1*(@z16)/2; line-width: @z16/2; }
+			[zoom>=17] { line-offset: -1*(@z17)/2; line-width: @z17/2; }
+    	}
 	}
 	/* Bande */
 	[cycleway='lane'] { 
@@ -50,9 +58,20 @@ Map {
 	[highway='cycleway'] { 
 			line-color: #007711;
 	}
-	/* Voies vertes */
+  	/* Voies vertes */
+  	[highway='footway'] {
+    	['bicycle'='designated'], ['bicycle'= 'yes'], ['bicycle'='permissive'] {
+      			line-color: #caa000;
+				[zoom<=12] { line-dasharray: @z12 - 2, @z12*1.5; }
+				[zoom=13] { line-dasharray: @z13 - 2, @z13*1.5; }
+				[zoom=14] { line-dasharray: @z14 - 2, @z14*1.5; }
+				[zoom=15] { line-dasharray: @z15 - 2, @z15*1.5; }
+				[zoom=16] { line-dasharray: @z16 - 2, @z16*1.5; }
+				[zoom>=17] { line-dasharray: @z17 - 2, @z17*1.5; }
+      	}
+  	}
 	[highway='path'] {
-		['bicycle'='designated'] {
+		['bicycle'='designated'], ['bicycle'= 'yes'] {
 				line-color: #caa000;
 				[zoom<=12] { line-dasharray: @z12 - 2, @z12*1.5; }
 				[zoom=13] { line-dasharray: @z13 - 2, @z13*1.5; }
@@ -61,7 +80,7 @@ Map {
 				[zoom=16] { line-dasharray: @z16 - 2, @z16*1.5; }
 				[zoom>=17] { line-dasharray: @z17 - 2, @z17*1.5; }
 				/*en dasharray les surfaces définis et sinon en continue */ 
-				['surface'='paved'],['surface'='asphalt'],['surface'='compacted'],['surface'='concrete'],['surface'='concrete:lanes'],['surface'='paving_stones'],['surface'='concrete:plates'] { 
+				['surface'='paved'],['surface'='asphalt'],['surface'='compacted'],['surface'='concrete'],['surface'='concrete:lanes'],['surface'='paving_stones'],['surface'='concrete:plates'],['surface'='fine_gravel'] { 
 					[zoom<=12] { line-dasharray: @z12 + 2, 0; }
 					[zoom=13] { line-dasharray: @z13 + 2, 0; }
 					[zoom=14] { line-dasharray: @z14 + 2, 0; }
