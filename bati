@@ -7,11 +7,11 @@
     [zoom=17] {point-transform:"scale(0.9)"; point-allow-overlap:true;}
     [zoom=18] {point-transform:"scale(1)"; point-allow-overlap:true;}
     [access=null] { 
-      	[zoom<16] { point-transform:"scale(0)"; } 
-      	point-file: url('images/parking_velo.png'); 
+      [zoom<16] { point-transform:"scale(0)"; } 
+      point-file: url('images/parking_velo.png'); 
     }
     [bicycle_parking='shed'] {
-      	point-file:url('images/parking_securise.png');
+      point-file:url('images/parking_securise.png');
     }
  	 [type='bicycle_rental'] {
 	    point-file:url('images/station_velo_v.png');
