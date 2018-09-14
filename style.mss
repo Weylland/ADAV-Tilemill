@@ -56,40 +56,75 @@ Map {
 	}
 	/* Dédié vélo */
 	[highway='cycleway'] { 
-			line-color: #007711;
+		line-color: #007711;
 	}
   	/* Voies vertes */
   	[highway='footway'] {
     	['bicycle'='designated'], ['bicycle'= 'yes'], ['bicycle'='permissive'] {
-      			line-color: #caa000;
-				[zoom<=12] { line-dasharray: @z12 - 2, @z12*1.5; }
-				[zoom=13] { line-dasharray: @z13 - 2, @z13*1.5; }
-				[zoom=14] { line-dasharray: @z14 - 2, @z14*1.5; }
-				[zoom=15] { line-dasharray: @z15 - 2, @z15*1.5; }
-				[zoom=16] { line-dasharray: @z16 - 2, @z16*1.5; }
-				[zoom>=17] { line-dasharray: @z17 - 2, @z17*1.5; }
-      	}
+			line-color: #caa000;
+			[zoom<=12] { line-dasharray: @z12 - 2, @z12*1.5; }
+			[zoom=13] { line-dasharray: @z13 - 2, @z13*1.5; }
+			[zoom=14] { line-dasharray: @z14 - 2, @z14*1.5; }
+			[zoom=15] { line-dasharray: @z15 - 2, @z15*1.5; }
+			[zoom=16] { line-dasharray: @z16 - 2, @z16*1.5; }
+			[zoom>=17] { line-dasharray: @z17 - 2, @z17*1.5; }
+		}
   	}
 	[highway='path'] {
 		['bicycle'='designated'], ['bicycle'= 'yes'] {
-				line-color: #caa000;
-				[zoom<=12] { line-dasharray: @z12 - 2, @z12*1.5; }
-				[zoom=13] { line-dasharray: @z13 - 2, @z13*1.5; }
-				[zoom=14] { line-dasharray: @z14 - 2, @z14*1.5; }
-				[zoom=15] { line-dasharray: @z15 - 2, @z15*1.5; }
-				[zoom=16] { line-dasharray: @z16 - 2, @z16*1.5; }
-				[zoom>=17] { line-dasharray: @z17 - 2, @z17*1.5; }
-				/*en dasharray les surfaces définis et sinon en continue */ 
-				['surface'='paved'],['surface'='asphalt'],['surface'='compacted'],['surface'='concrete'],['surface'='concrete:lanes'],['surface'='paving_stones'],['surface'='concrete:plates'],['surface'='fine_gravel'] { 
-					[zoom<=12] { line-dasharray: @z12 + 2, 0; }
-					[zoom=13] { line-dasharray: @z13 + 2, 0; }
-					[zoom=14] { line-dasharray: @z14 + 2, 0; }
-					[zoom=15] { line-dasharray: @z15 + 2, 0; }
-					[zoom=16] { line-dasharray: @z16 + 2, 0; }
-					[zoom>=17] { line-dasharray: @z17 + 2, 0; }
-				}
+			line-color: #caa000;
+			[zoom<=12] { line-dasharray: @z12 - 2, @z12*1.5; }
+			[zoom=13] { line-dasharray: @z13 - 2, @z13*1.5; }
+			[zoom=14] { line-dasharray: @z14 - 2, @z14*1.5; }
+			[zoom=15] { line-dasharray: @z15 - 2, @z15*1.5; }
+			[zoom=16] { line-dasharray: @z16 - 2, @z16*1.5; }
+			[zoom>=17] { line-dasharray: @z17 - 2, @z17*1.5; }
+			/*en dasharray les surfaces définis et sinon en continue */ 
+			['surface'='paved'],['surface'='asphalt'],['surface'='compacted'],['surface'='concrete'],['surface'='concrete:lanes'],['surface'='paving_stones'],['surface'='concrete:plates'],['surface'='fine_gravel'] { 
+				[zoom<=12] { line-dasharray: @z12 + 2, 0; }
+				[zoom=13] { line-dasharray: @z13 + 2, 0; }
+				[zoom=14] { line-dasharray: @z14 + 2, 0; }
+				[zoom=15] { line-dasharray: @z15 + 2, 0; }
+				[zoom=16] { line-dasharray: @z16 + 2, 0; }
+				[zoom>=17] { line-dasharray: @z17 + 2, 0; }
+			}
 		}
 	}
+	[highway='track'] {
+		['bicycle'='designated'], ['bicycle'= 'yes']{
+			['tracktype'='grade1'] {
+				['motor_vehicle'='agricultural'] {
+					line-color: #caa000;
+				}
+			}
+		}
+	}
+	[highway='track'], [highway='service'] {
+		['bicycle'='designated'], ['bicycle'= 'yes']{
+			['motor_vehicle'='destination'] {
+				['operator'='VNF'] {
+					line-color: #caa000;
+				}
+			}
+		}
+	}
+    [highway='track'], [highway='service'] {
+        ['bicycle'='designated'], ['bicycle'= 'yes']{
+            ['motor_vehicle'='no'] {
+                ['operator'='VNF'] {
+                    ['access'='customers'] {
+                        line-color: #66ccff;
+                        [zoom<=12] { line-dasharray: @z12 - 2, @z12*1.5; }
+                        [zoom=13] { line-dasharray: @z13 - 2, @z13*1.5; }
+                        [zoom=14] { line-dasharray: @z14 - 2, @z14*1.5; }
+                        [zoom=15] { line-dasharray: @z15 - 2, @z15*1.5; }
+                        [zoom=16] { line-dasharray: @z16 - 2, @z16*1.5; }
+                        [zoom>=17] { line-dasharray: @z17 - 2, @z17*1.5; }
+                    }
+                }
+            }
+        }
+  	}
 	/* Tous les contre-sens indiqués par des chevrons */
 	[cycleway='opposite'] {
 		marker-file: url('images/DSC_chevrons_vert_009933.svg');
