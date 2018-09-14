@@ -9,24 +9,24 @@
 
 	/* pistes unidirectionnel */
 	['cycleway:left'='track'] {
-			[zoom<=12] { line-offset: @z12/2; line-width: @z12/2; }
-			[zoom=13] { line-offset: @z13/2; line-width: @z13/2; }
-			[zoom=14] { line-offset: @z14/2; line-width: @z14/2; }
-			[zoom=15] { line-offset: @z15/2; line-width: @z15/2; }
-			[zoom=16] { line-offset: @z16/2; line-width: @z16/2; }
-			[zoom>=17] { line-offset: @z17/2; line-width: @z17/2; }
-			line-color: #009933;
+		[zoom<=12] { line-offset: @z12/2; line-width: @z12/2; }
+		[zoom=13] { line-offset: @z13/2; line-width: @z13/2; }
+		[zoom=14] { line-offset: @z14/2; line-width: @z14/2; }
+		[zoom=15] { line-offset: @z15/2; line-width: @z15/2; }
+		[zoom=16] { line-offset: @z16/2; line-width: @z16/2; }
+		[zoom>=17] { line-offset: @z17/2; line-width: @z17/2; }
+		line-color: #009933;
 	}
 	
 	/* Piste dans un seul sens */
      ['cycleway:left'='lane'] {
-			[zoom<=12] { line-offset: @z12/2; line-width: @z12/2; line-dasharray: @z12 - 2, @z12*1.5; }
-			[zoom=13] { line-offset: @z13/2; line-width: @z13/2; line-dasharray: @z13 - 2, @z13*1.5; }
-			[zoom=14] { line-offset: @z14/2; line-width: @z14/2; line-dasharray: @z14 - 2, @z14*1.5; }
-			[zoom=15] { line-offset: @z15/2; line-width: @z15/2; line-dasharray: @z15 - 2, @z15*1.5; }
-			[zoom=16] { line-offset: @z16/2; line-width: @z16/2; line-dasharray: @z16 - 2, @z16*1.5; }
-			[zoom>=17] { line-offset: @z17/2; line-width: @z17/2; line-dasharray: @z17 - 2, @z17*1.5; }
-			line-color: #009933;
+		[zoom<=12] { line-offset: @z12/2; line-width: @z12/2; line-dasharray: @z12 - 2, @z12*1.5; }
+		[zoom=13] { line-offset: @z13/2; line-width: @z13/2; line-dasharray: @z13 - 2, @z13*1.5; }
+		[zoom=14] { line-offset: @z14/2; line-width: @z14/2; line-dasharray: @z14 - 2, @z14*1.5; }
+		[zoom=15] { line-offset: @z15/2; line-width: @z15/2; line-dasharray: @z15 - 2, @z15*1.5; }
+		[zoom=16] { line-offset: @z16/2; line-width: @z16/2; line-dasharray: @z16 - 2, @z16*1.5; }
+		[zoom>=17] { line-offset: @z17/2; line-width: @z17/2; line-dasharray: @z17 - 2, @z17*1.5; }
+		line-color: #009933;
 	}
 
 	/* Double sens cyclable avec bande */
@@ -51,13 +51,13 @@
 	}
 	/* Couloir de bus partagé */
 	['cycleway:left'='share_busway'] {
-			[zoom<=12] { line-offset: @z12/2; line-width: @z12/2; }
-			[zoom=13] { line-offset: @z13/2; line-width: @z13/2; }
-			[zoom=14] { line-offset: @z14/2; line-width: @z14/2; }
-			[zoom=15] { line-offset: @z15/2; line-width: @z15/2; }
-			[zoom=16] { line-offset: @z16/2; line-width: @z16/2; }
-			[zoom>=17] { line-offset: @z17/2; line-width: @z17/2; }
-			line-color: #99cc33;
+		[zoom<=12] { line-offset: @z12/2; line-width: @z12/2; }
+		[zoom=13] { line-offset: @z13/2; line-width: @z13/2; }
+		[zoom=14] { line-offset: @z14/2; line-width: @z14/2; }
+		[zoom=15] { line-offset: @z15/2; line-width: @z15/2; }
+		[zoom=16] { line-offset: @z16/2; line-width: @z16/2; }
+		[zoom>=17] { line-offset: @z17/2; line-width: @z17/2; }
+		line-color: #99cc33;
 	}
 	['cycleway:left'='opposite_share_busway'] {
 		[zoom<=12] { line-offset: @z12/2; line-width: @z12/2; }
