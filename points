@@ -6,11 +6,12 @@
       [zoom=15] {point-transform:"scale(0.5)";}
       [zoom=16] {point-transform:"scale(0.6)"; point-allow-overlap:true;}
       [zoom=17] {point-transform:"scale(0.8)"; point-allow-overlap:true;}
-    [access='customers'] {
-      [bicycle_parking='shed'], [bicycle_parking='building']{
-        point-file:url('images/parking_securise.png');
-        [zoom<16] { point-transform:"scale(0)"; }
-      }   
+      [access='customers'] {
+        [bicycle_parking='shed'], [bicycle_parking='building']{
+          point-file:url('images/parking_securise.png');
+          [zoom<16] { point-transform:"scale(0)"; }
+        }   
+      }
     }
     [type='bicycle_rental'] {
       point-file:url('images/VLS_rouge.png');
@@ -19,7 +20,6 @@
       [zoom=15] {point-transform:"scale(0.5)";}
       [zoom=16] {point-transform:"scale(0.6)"; point-allow-overlap:true;}
       [zoom=17] {point-transform:"scale(0.8)"; point-allow-overlap:true;}
-      }
-    } 
-  }
+    }
+  } 
 }
