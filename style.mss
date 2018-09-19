@@ -141,10 +141,10 @@ Map {
 		marker-file: url('images/chevrons_vert.png');
 		marker-placement: line;
 		marker-opacity: 0.8;
-		[zoom<=14] { marker-width: @z14; marker-spacing: @z14*1.5; }
-		[zoom=15] { marker-width: @z15; marker-spacing: @z15*1.5; }
-		[zoom=16] { marker-width: @z16; marker-spacing: @z16*1.5; }
-		[zoom>=17] { marker-width: @z17; marker-spacing: @z17*1.5; }
+		[zoom<=14] { marker-width: @z14; marker-spacing: @z14*2; }
+		[zoom=15] { marker-width: @z15; marker-spacing: @z15*2; }
+		[zoom=16] { marker-width: @z16; marker-spacing: @z16*2; }
+		[zoom>=17] { marker-width: @z17; marker-spacing: @z17*2; }
 	}
 
 	/* Double sens cyclable avec bande */
