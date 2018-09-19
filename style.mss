@@ -169,16 +169,4 @@ Map {
 		[zoom>=17] { line-offset: @z17/2; line-width: @z17/2; }
 		line-color: #99cc33;
 	}
-  /* Traversée cyclable */
-  	 [footway='crossing'] {
-  		[bicycle='yes'] {
-      		line-color: #009933;
-			[zoom<=12] { line-dasharray: @z12 - 3, @z12*0.3; }
-			[zoom=13] { line-dasharray: @z13 - 3, @z13*0.3; }
-			[zoom=14] { line-dasharray: @z14 - 3, @z14*0.3; }
-			[zoom=15] { line-dasharray: @z15 - 3, @z15*0.3; }
-			[zoom=16] { line-dasharray: @z16 - 3, @z16*0.3; }
-			[zoom>=17] { line-dasharray: @z17 - 7, @z17*0.3; }
-    	}
-  	}
 }
