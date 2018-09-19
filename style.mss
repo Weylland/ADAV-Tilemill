@@ -33,7 +33,7 @@ Map {
     	}
 	}
 	/* piste */
-	[highway='cycleway'],[cycleway='track'], [cycleway='sidewalk'] {
+	[highway='cycleway'],[cycleway='track'] {
 			line-color: #009933;
     	['oneway'= 1] {
       		[zoom<=12] { line-offset: -1*(@z12)/2; line-width: @z12/2; }
