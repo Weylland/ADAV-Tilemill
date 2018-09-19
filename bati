@@ -1,25 +1,30 @@
 #bati {
-  [zoom>=14] {
-    point-file:url('images/parking_velo.png');
-    [zoom=14] {point-transform:"scale(0.5)";}
-    [zoom=15] {point-transform:"scale(0.6)";}
-    [zoom=16] {point-transform:"scale(0.7)"; point-allow-overlap:true;}
-    [zoom=17] {point-transform:"scale(0.9)"; point-allow-overlap:true;}
-    [zoom=18] {point-transform:"scale(1)"; point-allow-overlap:true;}
-    [access=null] { 
-      [zoom<16] { point-transform:"scale(0)"; } 
-      point-file: url('images/parking_velo.png'); 
+  [zoom>=14]{
+    [type='bicycle_parking'] {
+        [access='customers'] {
+        [bicycle_parking='shed'], [bicycle_parking='building']{
+          point-file:url('images/parking_securise.png');
+          [zoom=14] {point-transform:"scale(0.8)";}
+          [zoom=15] {point-transform:"scale(0.9)";}
+          [zoom=16] {point-transform:"scale(1)"; point-allow-overlap:true;}
+          [zoom=17] {point-transform:"scale(1)"; point-allow-overlap:true;}
+        }   
+      }
     }
-    [bicycle_parking='shed'] {
-      point-file:url('images/parking_securise.png');
+  }
+  [zoom>=16]{
+    [type='bicycle_parking'] {
+      point-file:url('images/parking_velo.png');
+      [zoom=16] {point-transform:"scale(0.6)"; point-allow-overlap:true;}
+      [zoom=17] {point-transform:"scale(0.8)"; point-allow-overlap:true;}
     }
- 	 [type='bicycle_rental'] {
-	    point-file:url('images/station_velo_v.png');
-  	  point-allow-overlap:true;
-  	  [zoom=14] {point-transform:"scale(0.4)";}
-  	  [zoom=15] {point-transform:"scale(0.5)";}
-  	  [zoom=16] {point-transform:"scale(0.6)"; point-allow-overlap:true;}
-  	  [zoom=17] {point-transform:"scale(0.8)"; point-allow-overlap:true;}
-  	}
+    [type='bicycle_rental'] {
+      point-file:url('images/VLS_rouge.png');
+      point-allow-overlap:true;
+      [zoom=14] {point-transform:"scale(0.4)";}
+      [zoom=15] {point-transform:"scale(0.5)";}
+      [zoom=16] {point-transform:"scale(0.6)"; point-allow-overlap:true;}
+      [zoom=17] {point-transform:"scale(0.8)"; point-allow-overlap:true;}
+    }
   } 
 }
