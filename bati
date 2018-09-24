@@ -1,4 +1,16 @@
 #bati {
+  [zoom>=12] {
+    [operator='SNCF'] {
+      [railway='halt'], [railway='station'] {
+        point-file:url('images/logo_sncf.png');
+        point-transform:"scale(0.7)";
+      	[zoom=14] {point-transform:"scale(0.8)";}
+     	[zoom=15] {point-transform:"scale(0.9)";}
+      	[zoom=16] {point-transform:"scale(1)"; point-allow-overlap:true;}
+      	[zoom=17] {point-transform:"scale(1)"; point-allow-overlap:true;}
+      }
+    }
+  }
   [zoom>=14]{
     [type='bicycle_parking'] {
         [access='customers'] {
@@ -6,8 +18,8 @@
           point-file:url('images/parking_securise.png');
           [zoom=14] {point-transform:"scale(0.8)";}
           [zoom=15] {point-transform:"scale(0.9)";}
-          [zoom=16] {point-transform:"scale(1)"; point-allow-overlap:true;}
-          [zoom=17] {point-transform:"scale(1)"; point-allow-overlap:true;}
+          [zoom=16] {point-transform:"scale(1.1)"; point-allow-overlap:true;}
+          [zoom=17] {point-transform:"scale(1.1)"; point-allow-overlap:true;}
         }   
       }
     }
@@ -26,5 +38,5 @@
       [zoom=16] {point-transform:"scale(0.6)"; point-allow-overlap:true;}
       [zoom=17] {point-transform:"scale(0.8)"; point-allow-overlap:true;}
     }
-  } 
+  }
 }

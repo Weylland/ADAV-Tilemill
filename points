@@ -5,7 +5,7 @@
         point-file:url('images/logo_sncf.png');
         point-transform:"scale(0.7)";
       	[zoom=14] {point-transform:"scale(0.8)";}
-     	  [zoom=15] {point-transform:"scale(0.9)";}
+     	[zoom=15] {point-transform:"scale(0.9)";}
       	[zoom=16] {point-transform:"scale(1)"; point-allow-overlap:true;}
       	[zoom=17] {point-transform:"scale(1)"; point-allow-overlap:true;}
       }
