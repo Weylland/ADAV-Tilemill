@@ -37,6 +37,18 @@
       [zoom=15] {point-transform:"scale(0.5)";}
       [zoom=16] {point-transform:"scale(0.6)"; point-allow-overlap:true;}
       [zoom=17] {point-transform:"scale(0.8)"; point-allow-overlap:true;}
+      [network="V\'Lille"] {
+        point-file:url('images/Vlille.png');
+      }
+      [network="Velam"] {
+        point-file:url('images/velam_2.png');
+      }
+      [network="Vel\'in"] {
+        point-file:url('images/velin.png');
+      }
+      [network="DK\'Vélo"] {
+        point-file:url('images/dkvelo.png');
+      }
     }
   }
 }
