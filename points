@@ -33,10 +33,8 @@
     [type='bicycle_rental'] {
       point-file:url('images/VLS_rouge.png');
       point-allow-overlap:true;
-      [zoom=14] {point-transform:"scale(0.4)";}
-      [zoom=15] {point-transform:"scale(0.5)";}
-      [zoom=16] {point-transform:"scale(0.6)"; point-allow-overlap:true;}
-      [zoom=17] {point-transform:"scale(0.8)"; point-allow-overlap:true;}
+      [zoom=16] {point-transform:"scale(0.8)"; point-allow-overlap:true;}
+      [zoom=17] {point-transform:"scale(1)"; point-allow-overlap:true;}
       [network="V\'Lille"] {
         point-file:url('images/Vlille.png');
       }
